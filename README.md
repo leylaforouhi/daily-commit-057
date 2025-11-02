@@ -1,2 +1,14 @@
-# daily-commit-057
-My fifty-seventh daily GitHub activity repository
+def sum_of_primes(n):
+    def is_prime(x):
+        if x < 2:
+            return False
+        for i in range(2, int(x**0.5) + 1):
+            if x % i == 0:
+                return False
+        return True
+
+    return sum(i for i in range(2, n + 1) if is_prime(i))
+
+if __name__ == "__main__":
+    limit = 50
+    print(f"Sum of prime numbers up to {limit}: {sum_of_primes(limit)}")
